@@ -310,3 +310,9 @@ def delete_rule(table_id: uuid.UUID, rule_id: uuid.UUID, db: Neo4jConnection = D
 #         return False
 #     else:
 #         return True
+
+
+
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app)
