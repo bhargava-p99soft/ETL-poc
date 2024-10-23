@@ -1,24 +1,3 @@
-# import pandas as pd
-# from sklearn.ensemble import IsolationForest
-# from fancyimpute import KNN  # KNN Imputation for missing/incorrect values
-
-
-# def impute_anomalies(df):
-#     numeric_df = df.select_dtypes(include=['float64', 'int64'])
-#     isolation_forest = IsolationForest(contamination=0.05)
-#     df['anomaly_isolation_forest'] = isolation_forest.fit_predict(numeric_df)
-
-#     anomalous_rows = df['anomaly_isolation_forest'] == -1
-#     numeric_df_cleaned = numeric_df.copy()
-#     numeric_df_cleaned[anomalous_rows] = float('nan')
-
-#     # KNN Imputation
-#     numeric_df_imputed = pd.DataFrame(KNN(k=5).fit_transform(numeric_df_cleaned), columns=numeric_df.columns)
-#     df.update(numeric_df_imputed)
-
-#     return df
-
-
 import pandas as pd
 import numpy as np
 from fuzzywuzzy import process
@@ -66,14 +45,3 @@ def impute_anomalies(df):
     df = impute_numeric_anomalies(df)
     
     return df
-
-# # Example Usage
-# df = pd.DataFrame({
-#     'name': ['John', 'Jon', 'Jonn', 'Jane', None, 'Jon', 'John'],
-#     'age': [25, 28, 27, np.nan, 22, 29, 30],
-#     'city': ['New York', 'NewYork', 'new york', 'London', 'London', 'New York', None]
-# })
-
-# # Impute anomalies in the DataFrame
-# cleaned_df = impute_anomalies(df)
-# print(cleaned_df)
