@@ -29,9 +29,9 @@ Now create two tables with names "uncleaned_data" and "cleaned_data"
     SEX VARCHAR(30),
     EMAIL VARCHAR(100),
     PHONE VARCHAR(30),
-    JOB_TITLE VARCHAR(200));```
+    JOB_TITLE VARCHAR(200));
 
-```CREATE OR REPLACE TABLE cleaned_table (
+CREATE OR REPLACE TABLE cleaned_table (
     INDEX_ID INT,
     USER_ID VARCHAR(30),
     FIRST_NAME VARCHAR(50),
@@ -45,14 +45,14 @@ Now create two tables with names "uncleaned_data" and "cleaned_data"
 While testing the pipeline multiple times, below commands may be helpful
 
 ### To empty the tables
-Truncate Table UNCLEANED_TABLE;
-Truncate Table CLEANED_TABLE;
+```Truncate Table UNCLEANED_TABLE;
+Truncate Table CLEANED_TABLE;```
 
 
 ### To drop the tables
-DROP TABLE UNCLEANED_TABLE;
-DROP TABLE CLEANED_TABLE;
+```DROP TABLE UNCLEANED_TABLE;
+DROP TABLE CLEANED_TABLE;```
 
 Finally to run the ETL pipeline, run the below command
 
-python main.py
+```python main.py```
