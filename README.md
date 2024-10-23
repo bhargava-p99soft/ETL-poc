@@ -21,7 +21,8 @@ Now upload people.csv in sample_data folder to UNCLEANED_STAGE
 
 Now create two tables with names "uncleaned_data" and "cleaned_data"
 
-```CREATE OR REPLACE TABLE uncleaned_table (
+```
+CREATE OR REPLACE TABLE uncleaned_table (
     INDEX_ID INT,
     USER_ID VARCHAR(30),
     FIRST_NAME VARCHAR(50),
@@ -39,7 +40,9 @@ CREATE OR REPLACE TABLE cleaned_table (
     SEX VARCHAR(30),
     EMAIL VARCHAR(100),
     PHONE VARCHAR(30),
-    JOB_TITLE VARCHAR(200));```
+    JOB_TITLE VARCHAR(200));
+
+```
 
 
 While testing the pipeline multiple times, below commands may be helpful
